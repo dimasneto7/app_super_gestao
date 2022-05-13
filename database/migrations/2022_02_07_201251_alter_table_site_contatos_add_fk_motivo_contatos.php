@@ -40,7 +40,7 @@ class AlterTableSiteContatosAddFkMotivoContatos extends Migration
         // criar a coluna motivo_contato eremovendo a fk
         Schema::table('site_contatos', function (Blueprint $table) {
             $table->integer('motivo_contato');
-            $table->dropForeign('site_contatos_motivo_contatos_id_foreign');
+            $table->dropForeign('site_contatos_motivo_contatos_id_foreign'); // ('<tabela>_<coluna>_foreign)
         });
 
         // atribuindo motivo_contatos_id para a nova coluna motivo_contato
